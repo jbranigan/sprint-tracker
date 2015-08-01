@@ -1,0 +1,10 @@
+extends layout
+
+block content
+    h1= title
+    p Sprint Ending #{projects[0].end}
+
+    ul
+        - for(project in projects) {
+            li #{projects[project].name} (#{projects[project].points})
+        - }

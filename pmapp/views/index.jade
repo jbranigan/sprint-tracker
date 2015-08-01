@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1= title
+    p #{title}
+
+    ul
+        - for(sprint in sprints) {
+            li 
+                a(href="sprint/#{sprints[sprint].id}") #{sprints[sprint].end}
+        - }
